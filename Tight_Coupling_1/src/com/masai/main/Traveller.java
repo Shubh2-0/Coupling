@@ -1,0 +1,58 @@
+package com.masai.main;
+
+//DEPENDENCY CLASS
+class Car {
+	
+	public void start() {
+		
+		System.out.println("start trip by car");
+		
+	}
+
+}
+
+
+//DEPENDENCY CLASS
+class Bike {
+	
+public void start() {
+		
+		System.out.println("start trip by bike");
+		
+	}
+	
+}
+
+
+/* TIGHT COUPLING => IF WE HAVE DEPENDENCY OF A CLASS 
+IN OTHER CLASS(OBJECT OF ANOTHER CLASS CONTAIN)
+IF WE DO SOME CHANGES IN OUR DEPENDENCY AND AFTER 
+SAME WE HAVE TO SOME CHANGES IN OUR DEPENDENT CLASS 
+SO IT IS CALLED AS TIGHT COUPLING THAT IS NOT GOOD PRACTICE 
+
+DEGREE OB DEPENDENCY IS HIGH 
+
+*/
+
+
+
+
+//DEPENDENT CLASS
+/* NOW OUR TRAVELLER WANTS TO START THIER TRIP BY BIKE , OR ANY OTHER VEHICLE (ANOTHER CLASS)
+SO WE HAVE DO SOME CHANGES IN TRAVELLER CLASS ALSO 
+INSTEAD OF CRETING CAR OBJECT WE HAVE TO CRAETE 
+BIKE OBJECT WHICH IS NOT GOOD PRACTICE 
+SO HERE OUR CLASSES IS TIGHT COUPLED WITH EACH OTHER
+*/
+public class Traveller {
+
+	
+	static Bike bike = new Bike();
+	
+	public static void main(String[] args) {
+	
+		bike.start();
+		
+	}
+
+}
