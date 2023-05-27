@@ -122,4 +122,4 @@ C
 
 ```
 
-
+# Using interfaces, we achieve the loose coupling by injecting the dependency. #
