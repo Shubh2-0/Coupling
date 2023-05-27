@@ -122,4 +122,8 @@ C
 
 ```
 
-# Using interfaces, we achieve the loose coupling by injecting the dependency. #
+# Using interfaces, we achieve the loose coupling by injecting the dependency. 
+
+<img src="https://scaler.com/topics/images/oops-concept-in-java-image-types-of-coupling.webp">
+
+
