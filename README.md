@@ -1,6 +1,6 @@
 # Coupling
 
-<img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fentri.app%2Fblog%2Floose-coupling-vs-tight-coupling-in-java%2F&psig=AOvVaw1HL7pqKWz2Fj3fkGpiWsbX&ust=1685253565797000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCJCKhvXolP8CFQAAAAAdAAAAABAM">
+<img src="https://cdn.educba.com/academy/wp-content/uploads/2021/05/Coupling-in-Java.jpg">
 
 Coupling refers to the usage of an object by another object. It can also be termed as collaboration. This dependency of one object on another object to get some task done can be classified into the following two types −
 
