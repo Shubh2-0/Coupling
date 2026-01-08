@@ -1,129 +1,51 @@
-# Coupling
+<div align="center">
 
-<img src="https://cdn.educba.com/academy/wp-content/uploads/2021/05/Coupling-in-Java.jpg">
+# 🔗 Software Coupling
 
-Coupling refers to the usage of an object by another object. It can also be termed as collaboration. This dependency of one object on another object to get some task done can be classified into the following two types −
+[![GitHub stars](https://img.shields.io/github/stars/Shubh2-0/Coupling?style=for-the-badge&logo=github&color=yellow)](https://github.com/Shubh2-0/Coupling/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/Shubh2-0/Coupling?style=for-the-badge&logo=github&color=blue)](https://github.com/Shubh2-0/Coupling/network/members)
 
-# Tight coupling
-When an object creates the object to be used, then it is a tight coupling situation. As the main object creates the object itself, this object can not be changed from outside world easily marked it as tightly coupled objects.
+### Understanding Code Dependencies
 
-Example - Tight Coupling
+*From tight coupling to loose coupling - best practices*
 
-Tester.java
-```
-public class Tester {
-   public static void main(String args[]) {
-      A a = new A();
+</div>
 
-      //a.display() will print A and B
-      //this implementation can not be changed dynamically
-      //being tight coupling
-      a.display();
-   }
-}
+---
 
-class A {
-   B b;
-   public A() {
-      //b is tightly coupled to A
-      b = new B();
-   }
+## 🎯 About
 
-   public void display() {
-      System.out.println("A");
-      b.display();
-   }
-}
+Learn about **software coupling** - the degree of interdependence between modules. Understand different coupling types and achieve loosely coupled, maintainable code.
 
-class B {    
-   public B(){}
-   public void display() {
-      System.out.println("B");
-   }
-}
-```
-This will produce the following result −
-```
-Output
+## 📊 Coupling Types
 
-A
-B
+| Type | Coupling Level | Description |
+|------|----------------|-------------|
+| Content | Highest (Worst) | Direct access to internals |
+| Common | High | Shared global data |
+| Control | Medium | Pass control information |
+| Stamp | Medium | Pass data structures |
+| Data | Low | Pass only needed data |
+| Message | Lowest (Best) | Communication via messages |
+
+## 💡 Best Practice
 
 ```
-
-
-# Loose coupling 
-When an object gets the object to be used from the outside, then it is a loose coupling situation. As the main object is merely using the object, this object can be changed from the outside world easily marked it as loosely coupled objects.
-
-Example - Loose Coupling
-Tester.java
-
+Tight Coupling ❌          Loose Coupling ✅
+┌──────┐                   ┌──────┐
+│  A   │──────────►│  B   │         │  A   │─────Interface─────►│  B   │
+└──────┘  Direct   └──────┘         └──────┘                    └──────┘
 ```
 
-import java.io.IOException;
+## 🛠️ Technologies
 
-public class Tester {
-   public static void main(String args[]) throws IOException {
-      Show b = new B();
-      Show c = new C();
+Java | Design Patterns | SOLID Principles
 
-      A a = new A(b);          
-      //a.display() will print A and B    
-      a.display();
+## 📬 Contact
 
-      A a1 = new A(c);
-      //a.display() will print A and C    
-      a1.display();
-   }
-}
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/shubham-bhati-787319213/)
+[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:shubhambhati226@gmail.com)
 
-interface Show {
-   public void display();
-}
+---
 
-class A {
-   Show s;
-   public A(Show s) {
-      //s is loosely coupled to A
-      this.s = s;
-   }
-
-   public void display() {
-      System.out.println("A");
-      s.display();
-   }
-}
-
-class B implements Show {    
-   public B(){}
-   public void display() {
-      System.out.println("B");
-   }
-}
-
-class C implements Show {    
-   public C(){}
-   public void display() {
-      System.out.println("C");
-   }
-}
-
-```
-
-This will produce the following result −
-
-```
-Output
-
-A
-B
-A
-C
-
-```
-
-# Using interfaces, we achieve the loose coupling by injecting the dependency. 
-
-<img src="https://scaler.com/topics/images/oops-concept-in-java-image-types-of-coupling.webp">
-
-
+**Keywords:** Java Coupling Loose-Coupling Design-Principles SOLID Clean-Code
